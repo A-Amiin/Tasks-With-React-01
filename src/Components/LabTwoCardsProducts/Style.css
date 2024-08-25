@@ -1,0 +1,60 @@
+.Boddy {
+    width: 450px;
+    height: 570px;
+    background-color: #f1f1f1;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    display: flex;
+    color: blueviolet;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-color: #333;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 400px;
+    height: 350px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.Span {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.truncate {
+    font-size: 18px;
+    white-space: nowrap;
+    /* Prevents text from wrapping to a new line */
+    overflow: hidden;
+    /* Hides the overflowing text */
+    text-overflow: ellipsis;
+    /* Adds ellipsis (...) at the end of the truncated text */
+    display: inline-block;
+    width: 100%;
+}
+
+.AddedItems {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
