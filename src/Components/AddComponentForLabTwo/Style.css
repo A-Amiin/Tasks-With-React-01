@@ -1,15 +1,29 @@
-.ALLStyle {
-    width: 150px;
-    font-size: 18px;
-    color: white;
-    background-color: black;
-    padding: 10px;
+.Component {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    width: 100px;
+    border: 3px solid #4caf4f10;
     border-radius: 15px;
+    background-color: #4caf4f9f;
 }
 
-.Span {
-    width: 30px;
-    height: 30px;
-    background-color: blueviolet;
+.Component button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf4f12;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
 
+.Component button:hover {
+    background-color: #316734;
+}
+
+.Component span {
+    color: black;
+    font-weight: 700;
 }

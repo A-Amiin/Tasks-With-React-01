@@ -1,12 +1,13 @@
 import './App.css';
-import MyComponent from './Components/FirstClassComponent/FirstClassComponent';
-import Create from './Components/FirstFunctionalComponent/FirstFunctional Component';
-import MyInfo from './Components/SecFunctionalComponentWithProps/WithProps';
-import ClassProps from './Components/SecClassComponentWithProps/WithProps';
-import SubscriptionComponent from './Components/StateFulComponent/StateComponent';
-import Login from './Components/LoginPage/LOGIN';
-import SignUP from './Components/SignUpPage/SignUpCompo';
+// import MyComponent from './Components/FirstClassComponent/FirstClassComponent';
+// import Create from './Components/FirstFunctionalComponent/FirstFunctional Component';
+// import MyInfo from './Components/SecFunctionalComponentWithProps/WithProps';
+// import ClassProps from './Components/SecClassComponentWithProps/WithProps';
+// import SubscriptionComponent from './Components/StateFulComponent/StateComponent';
+// import Login from './Components/LoginPage/LOGIN';
+// import SignUP from './Components/SignUpPage/SignUpCompo';
 import Card from './Components/LabTwoCardsProducts/Cards';
+import Add from './Components/AddComponentForLabTwo/Add.jsx'
 function App() {
   return (
     <div className="App">
@@ -41,6 +42,7 @@ function App() {
       //Task 9
       <SignUP />
       */}
+      <Card />
     </div>
   );
 }
