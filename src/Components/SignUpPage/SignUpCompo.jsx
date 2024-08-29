@@ -13,36 +13,31 @@ class SignUP extends Component {
       password: "",
       confirmPassword: "",
       isSignedUp: false,
-      navigateTo: "", // Add navigateTo to manage navigation
+      navigateTo: "",
+      currentDate: "",
     };
 
+    this.handleChange = this.handleChange.bind(this); // Bind the handleChange method
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToLogin = this.navigateToLogin.bind(this); // Bind the function
   }
 
-  handleSubmit() {
-    // Get the values from the input fields
-    const firstName = document.getElementById("first").value;
-    const lastName = document.getElementById("last").value;
-    const phone = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
-    // Update the state with the input values and set isSignedUp to true
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
     this.setState(
       {
-        firstName: firstName,
-        lastName: lastName,
-        phone: phone,
-        email: email,
-        password: password,
-        confirmPassword: confirmPassword,
         isSignedUp: true, // Trigger the layout change
         currentDate: new Date().toLocaleDateString(),
       },
-      () => {
-        console.log("Updated State:", this.state);
-      }
+      // () => {
+      //   console.log("Updated State:", this.state);
+      // }                                                          it's for testing
     );
   }
 
@@ -52,7 +47,7 @@ class SignUP extends Component {
 
   render() {
     if (this.state.navigateTo === "login") {
-      return <Login />; // Render the Login component
+      return <Login />;
     }
 
     if (this.state.isSignedUp) {
@@ -71,32 +66,63 @@ class SignUP extends Component {
       <div className="card">
         <h1>Sign Up Page</h1>
         <h3>Don't have an account? Sign up below:</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="in-put">
             <label>First Name</label>
-            <input type="text" id="first" />
+            <input
+              type="text"
+              name="firstName"
+              value={this.state.firstName}
+              onChange={this.handleChange}
+            />
           </div>
           <div className="in-put">
             <label>Last Name</label>
-            <input type="text" id="last" />
+            <input
+              type="text"
+              name="lastName"
+              value={this.state.lastName}
+              onChange={this.handleChange}
+            />
           </div>
           <div className="in-put">
             <label>Phone</label>
-            <input type="number" id="phone" />
+            <input
+              type="number"
+              name="phone"
+              value={this.state.phone}
+              onChange={this.handleChange}
+            />
           </div>
           <div className="in-put">
             <label>E-Mail</label>
-            <input type="email" id="email" required />
+            <input
+              type="email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
           </div>
           <div className="in-put">
             <label>Password</label>
-            <input type="password" id="password" />
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
           </div>
           <div className="in-put">
-            <label>Confirm password</label>
-            <input type="password" id="confirmPassword" />
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={this.state.confirmPassword}
+              onChange={this.handleChange}
+            />
           </div>
-          <button type="button" onClick={this.handleSubmit}>
+          <button type="submit">
             Sign UP
           </button>
         </form>
@@ -112,3 +138,4 @@ class SignUP extends Component {
 }
 
 export default SignUP;
+

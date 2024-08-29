@@ -7,8 +7,8 @@ class Card extends Component {
   render() {
     return (
       <div className="Back">
-        {products.map((product, index) => (
-          <div key={index} className="Boddy">
+        {products.map((product) => (
+          <div key={product.id} className="Boddy">
             <img src={product.img} alt={product.name} />
             <Add />
             <h2>{product.name}</h2>

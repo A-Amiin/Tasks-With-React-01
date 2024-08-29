@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.comments-container {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.comment-card {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.comment-card h3 {
+    font-size: 1.3rem;
+    color: cadetblue;
+}
+
+.para-email {
+    font-size: 1.0em;
+    color: rgb(92, 68, 37);
+}
+
+.para-body {
+    font-size: 1.1rem;
+    color: darkslategray;
+}

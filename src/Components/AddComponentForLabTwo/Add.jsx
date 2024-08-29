@@ -11,14 +11,14 @@ class Add extends Component {
     // Function to handle increment
     incrementQuantity = () => {
         this.setState((prevState) => ({
-            quantity: prevState.quantity + 1,
+            quantity: prevState.quantity + 1, // prevState Whating the diff between the current and previous state
         }));
     };
 
     // Function to handle decrement
     decrementQuantity = () => {
         this.setState((prevState) => ({
-            quantity: Math.max(prevState.quantity - 1, 0), // Prevent negative quantity
+            quantity: Math.max(prevState.quantity - 1, 0), // prevState Whating the diff between the current and previous state
         }));
     };
 

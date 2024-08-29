@@ -8,28 +8,33 @@ class Login extends Component {
       username: "",
       password: "",
       loginMessage: "",
-      isLoggedIn: false, // Add isLoggedIn to track login status
-      navigateTo: "", // For navigation to SignUP component
+      isLoggedIn: false,
+      navigateTo: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.navigateToSignUp = this.navigateToSignUp.bind(this); // Bind the function
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.navigateToSignUp = this.navigateToSignUp.bind(this);
   }
 
-  handleChange() {
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  }
 
-    // Get the current date
+  handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
     const currentDate = new Date().toLocaleDateString();
-
-    // Update the state with login details and message
-    this.setState({
-      username: user,
-      password: pass,
-      loginMessage: `Hello, ${user} you logged in on ${currentDate}`,
-      isLoggedIn: true, // Set isLoggedIn to true after login
-    });
+    this.setState(
+      {
+        loginMessage: `Hello, ${this.state.username}, you logged in on ${currentDate}`,
+        isLoggedIn: true,
+      },
+      () => {
+        console.log("Updated State:", this.state);
+      }
+    );
   }
 
   navigateToSignUp() {
@@ -53,15 +58,27 @@ class Login extends Component {
       <div className="card">
         <h1>LogIn</h1>
         <h3>Already have an account? Login below:</h3>
-        <div className="in-put">
-          <label>Email</label>
-          <input id="username" type="email" />
-        </div>
-        <div className="in-put">
-          <label>Password</label>
-          <input id="password" type="password" />
-        </div>
-        <button onClick={this.handleChange}>Login</button>
+        <form onSubmit={this.handleSubmit}>
+          <div className="in-put">
+            <label>Email</label>
+            <input
+              type="email"
+              name="username"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="in-put">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
         <p>
           {" "}
           Don't have an account?{" "}

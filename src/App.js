@@ -6,8 +6,10 @@ import './App.css';
 // import SubscriptionComponent from './Components/StateFulComponent/StateComponent';
 // import Login from './Components/LoginPage/LOGIN';
 // import SignUP from './Components/SignUpPage/SignUpCompo';
-import Card from './Components/LabTwoCardsProducts/Cards';
-import Add from './Components/AddComponentForLabTwo/Add.jsx'
+// import Card from './Components/LabTwoCardsProducts/Cards';
+// import Add from './Components/AddComponentForLabTwo/Add.jsx'
+// import Comments from './Components/GetComponentExample/GetExample.jsx';
+import PostData from './Components/PostComponentExample/PostExample.jsx';
 function App() {
   return (
     <div className="App">
@@ -29,20 +31,31 @@ function App() {
       // Lap 2 in React Cerativa Mounofia
       
       //Task 6
-      <Add /> //Upcoming commit till next commit(tomorrow)
+      <Add />
+
       //Task 7
-      <Card /> // also upcoming commit till next commit(tomorrow)
-      */}
+      <Card />    //with the additional button component into the component(card)
+*/}
       {/* 
-      // Lap 3 in React Cerativa Mounofia
+      // Lap 3 , 4 in React Cerativa Mounofia
       
       //Task 8
       <Login />
 
       //Task 9
       <SignUP />
+      
       */}
-      <Card />
+      {/* 
+      // Lap 6 in React Cerativa Mounofia
+
+      //Task 10
+      <Comments /> //the Get request Example
+
+      //Task 12
+      
+      */}
+      <PostData />
     </div>
   );
 }
