@@ -9,7 +9,15 @@ import './App.css';
 // import Card from './Components/LabTwoCardsProducts/Cards';
 // import Add from './Components/AddComponentForLabTwo/Add.jsx'
 // import Comments from './Components/GetComponentExample/GetExample.jsx';
-import PostData from './Components/PostComponentExample/PostExample.jsx';
+// import PostData from './Components/PostComponentExample/PostExample.jsx';
+//import FirstComponent from './Components/UseEffectTask/FirstComponentTask/FirstComponent.jsx';
+//import UserComponent from './Components/UseEffectTask/SecoundComponentTask/SecondTask.jsx';
+//import ThirdComponent from './Components/UseEffectTask/ThirdComponentTask/ThirdComponent.jsx';
+//import WindowSize from './Components/UseEffectTask/FourthComponentTask/FourthTask.jsx';
+//import WhatchChange from './Components/UseEffectTask/FifthComponentTask/FifthComponent.jsx';
+//import CommentList from './Components/UseEffectTask/SixthComponentTask/SixthComponent.jsx';
+//import Search from './Components/UseEffectTask/SeventhComponentTask/SeventhComponent.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -54,8 +62,23 @@ function App() {
 
       //Task 12
       
-      */}
+      
       <PostData />
+      
+
+      // lab 7 in React with 7 tasks        ---------- 5 / 9 / 2024
+
+
+      <FirstComponent />
+      <UserComponent />
+      <ThirdComponent />
+      <WindowSize />
+      <WhatchChange />
+      <CommentList />
+      <Search />
+      */}
+
+
     </div>
   );
 }
